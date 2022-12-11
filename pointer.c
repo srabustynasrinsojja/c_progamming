@@ -8,7 +8,6 @@ int main()
     k=*s+*S;
     printf("%p\n",s);
     printf("%p\n",S);
-    *s=20;
-    printf("%p",k);
+    printf("%d",k);
 
 }
