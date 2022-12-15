@@ -1,27 +1,36 @@
-#include<stdio.h>
-int main()
+int main ()
 {
-    int i=0,k=0,j=0;
-    int x[10],*p,even[10],*e,odd[10],*o;
-    p=&x[0];
-    e=&even[0];
-    o=&odd[0];
-   for(i=0;i<10;i++){
-     scanf("%d",p+i);
-   }
-   for(i=0;i<10;i++){
-    if(*p+i%2==0){
-    *(e+k)=*p+i;
-      k++;}
-     else
-       *(o+j) =*p+i;
-      j++;
-   }
-   for(i=0;i<k;i++){
-    printf("%d",*e+i);
-   }
-   printf("\n");
-   for(i=0;i<j;i++){
-    printf("%d",*o+i);
-   }
+    int i,a[10],b[10],c[10],*p,j=0,k=0;
+
+    printf("Enter 10 value :");
+    p=&a[0];
+    for(i=0; i<10; i++)
+    {
+        scanf("%d",(p+i));
+    }
+    p=&a[0];
+    for(i=0; i<10; i++)
+    {
+        if(*(p+i)%2==0) {
+            b[j]=*(p+i);
+            j++;
+        }
+        if(*(p+i)%2==1) {
+            c[k]=*(p+i);
+            k++;
+        }
+    }
+
+    printf("Even Numbers:\n");
+    for(i=0; i<j; i++)
+    {
+        printf("%d ",b[i]);
+    }
+    printf("Odd Numbers:\n");
+    for(i=0; i<k; i++)
+    {
+        printf("%d ",c[i]);
+    }
+
+    return 0;
 }
