@@ -1,5 +1,5 @@
 #include<stdio.h>
-int fibonacchi(int x)
+int fibo(int x)
 {
     int i;
     int temp;
@@ -21,7 +21,7 @@ int main()
     int x;
     printf("Enter the size of the series:");
     scanf("%d",&x);
-    fibonacchi(x);
+    fibo(x);
     return 0;
 
 }
